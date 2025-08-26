@@ -1,19 +1,120 @@
-# Getting Started
-Install the dependencies and run the project
+# 📚 Research Tab Collector (Chrome Extension + Backend)
+
+A Chrome extension + Node.js backend to **save, tag, and organize research links** with notes.  
+Includes **authentication** so each user has their own saved tabs.
+
+---
+
+## 🚀 Features
+- 🔖 Save **current tab** or **manual URL** with notes & tags  
+- 🗂️ Organize links by tag (General, Project, Assignment, Thesis)  
+- 🔐 Authentication (Register / Login / Logout)  
+- ☁️ Links are stored **in MongoDB** (per user)  
+- 📤 Export saved research links to JSON  
+- 🧹 Clear all saved links (per user)  
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer       | Technology |
+|-------------|------------|
+| **Frontend** | Vanilla JS, HTML, CSS (Chrome Extension popup) |
+| **Backend**  | Node.js, Express |
+| **Database** | MongoDB + Mongoose |
+| **Auth**     | JWT + bcrypt |
+
+---
+
+## 📂 Project Structure
+```bash
+research-tab-collector/
+│
+├── extension/         # Chrome extension popup UI
+│   ├── index.html
+│   ├── index.css
+│   ├── index.js
+│   └── manifest.json
+│
+├── server/            # Node.js + Express backend
+│   ├── index.js
+│   ├── models/
+│   ├── routes/
+│   ├── package.json
+│   ├── .env.example   # Example env file
+│   └── ...
+│
+├── .gitignore
+├── README.md
+└── ...
 ```
+## ⚙️ Setup Instructions
+🔧 1. Clone the repo
+git clone https://github.com/YOUR_USERNAME/research-tab-collector.git
+cd research-tab-collector
+
+🔧 2. Backend Setup
+cd server
 npm install
-npm start
-```
 
-Head over to https://vitejs.dev/ to learn more about configuring vite
-## About Scrimba
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Fullstack Developer Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+Create a .env file inside /server:
 
-- [Our courses](https://scrimba.com/courses)
-- [The Frontend Career Path](https://scrimba.com/fullstack-path-c0fullstack)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+MONGO_URI=your_mongo_connection_string
+JWT_SECRET=your_secret_key
 
-Happy Coding!
+
+Start the backend server:
+
+npm run dev   # or: node index.js
+
+
+👉 Server runs at http://localhost:3000
+
+🔧 3. Chrome Extension Setup
+
+Open Chrome and go to: chrome://extensions/
+
+Enable Developer Mode
+
+Click Load unpacked
+
+Select the extension/ folder
+
+✅ The extension should now appear in your browser!
+
+🧪 Usage
+
+Register / Login inside the extension popup
+
+Save current tab or paste a link manually
+
+Add notes and tags for better organization
+
+Export or clear links whenever needed
+
+🔐 Authentication Flow
+
+Users register with username + password
+
+Passwords are stored securely using bcrypt hashing
+
+On login, backend issues a JWT token
+
+Token is stored in localStorage and used for API calls
+
+All tab operations (/tabs, /save-tab, etc.) require authentication
+
+📝 Future Improvements
+
+🔎 Search & filter by tag or note
+
+🎨 UI polish (dark mode, better styling)
+
+🌍 Deploy backend (Heroku / Render / Railway)
+
+🔄 Sync across devices
+
+👨‍💻 Author
+
+Built with ❤️ by [Your Name]
