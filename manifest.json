@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "version": "1.0",
+    "name": "Research Tab Collector",
+    "description": "A Chrome extension to collect and manage research links with notes and tags.",
+    "action": {
+        "default_popup": "extension/index.html",
+        "default_icon": "extension/icon.png"
+    },
+    "permissions": [
+        "tabs"
+    ]
+}

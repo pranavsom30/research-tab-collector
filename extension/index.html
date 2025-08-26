@@ -1,0 +1,38 @@
+<html>
+<head>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h2>Research Tab Collector</h2>
+
+    <!-- Auth section -->
+    <div id="auth-container">
+        <input type="text" id="username-el" placeholder="Username">
+        <input type="password" id="password-el" placeholder="Password">
+        <button id="register-btn">Register</button>
+        <button id="login-btn">Login</button>
+        
+    </div>
+
+    <!-- Main extension tools -->
+    <div id="main-container" style="display: none;">
+        <button id="logout-btn" style="background:black; color:cyan;">Logout</button>
+        <input type="text" id="input-el" placeholder="Enter research link (or leave empty to use Save Current Tab)">
+        <input type="text" id="note-el" placeholder="Enter note about this resource">
+        <select id="tag-el">
+            <option value="General">General</option>
+            <option value="Project">Project</option>
+            <option value="Assignment">Assignment</option>
+            <option value="Thesis">Thesis</option>
+        </select>
+        <button id="input-btn">Save Research Link</button>
+        <button id="tab-btn">Save Current Tab</button>
+        <button id="export-btn">Export All</button>
+        <button id="delete-btn">Clear All</button>
+
+        <ul id="ul-el"></ul>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
