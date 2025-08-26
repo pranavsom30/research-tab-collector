@@ -49,13 +49,13 @@ research-tab-collector/
 └── ...
 ```
 ## ⚙️ Setup Instructions
-###🔧 1. Clone the repo 
+### 🔧 1. Clone the repo 
 ```bash
 git clone https://github.com/YOUR_USERNAME/research-tab-collector.git
 cd research-tab-collector
 ```
 
-###🔧 2. Backend Setup
+### 🔧 2. Backend Setup
 ```bash
 cd server
 npm install
@@ -74,7 +74,7 @@ npm run dev   # or: node index.js
 
 👉 Server runs at http://localhost:3000
 
-🔧 3. Chrome Extension Setup
+### 🔧 3. Chrome Extension Setup
 1. Open Chrome and go to: chrome://extensions/
 2. Enable Developer Mode
 3. Click Load unpacked
@@ -87,7 +87,7 @@ npm run dev   # or: node index.js
 3. Add notes and tags for better organization
 4. Export or clear links whenever needed
 
-###🔐 Authentication Flow
+### 🔐 Authentication Flow
 
 Users register with username + password
 Passwords are stored securely using bcrypt hashing
@@ -97,12 +97,12 @@ Token is stored in localStorage and used for API calls
 
 All tab operations (/tabs, /save-tab, etc.) require authentication
 
-###📝 Future Improvements
+### 📝 Future Improvements
 
-🔎 Search & filter by tag or note
-🎨 UI polish (dark mode, better styling)
-🌍 Deploy backend (Heroku / Render / Railway)
-🔄 Sync across devices
-👨‍💻 Author
+- 🔎 Search & filter by tag or note
+- 🎨 UI polish (dark mode, better styling)
+- 🌍 Deploy backend (Heroku / Render / Railway)
+- 🔄 Sync across devices
 
+### 👨‍💻 Author
 Built with ❤️ by Pranav Somwanshi
